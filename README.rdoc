@@ -6,14 +6,19 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+2.6.4
 
 * System dependencies
+Utilize rbenv, ensure SQLite works
 
 * Configuration
+Utilize bundle to install gems
 
 * Database creation
+bundle exec rake db:migrate
 
 * Database initialization
+bundle exec rake db:seed
 
 * How to run the test suite
 
