@@ -37,5 +37,8 @@ ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 # Expose default Rails port
 EXPOSE 3000
 
+RUN rake db:migrate
+RUN rake db:seed
+
 # Start Rails server binding to 0.0.0.0 so it's reachable from the host
 CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
